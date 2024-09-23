@@ -1,0 +1,65 @@
+.cart
+    @apply border border-primary rounded-xl shadow-sm cursor-pointer w-[500px] overflow-hidden mx-auto mb-2
+    // hover:shadow-xl hover:-translate-y-2 hover:transition-opacity
+.bg
+    @apply w-[500px] block overflow-hidden rounded-t-xl border-b-primary border-solid
+    border-bottom: solid 1px #61A0AC
+.content
+    @apply px-2 py-3 text-ellipsis
+.name
+    @apply pb-3 text-xl truncate text-ellipsis 
+.date
+    @apply flex gap-1 pb-3 
+.p 
+    @apply truncate text-ellipsis
+.icon
+    width: 24px
+@media screen and (max-width: 550px)
+    .cart
+        @apply w-11/12
+@media screen and (max-width: 550px)
+    .cart
+        @apply w-[400px]
+@media screen and (max-width: 450px)
+    .cart
+        @apply w-[300px]
+//     .cart, .bg
+//         @apply w-72
+//     .bg
+//         @apply h-48
+// @media screen and (max-width: 957px)
+//     .cart, .bg
+//         @apply w-60
+//     .bg
+//         @apply h-36
+// @media screen and ( max-width: 550px )
+//     .cart, .bg
+//         @apply w-52
+//     .bg
+//         @apply h-32
+// @media screen and ( max-width: 480px )
+//     .cart, .bg
+//         @apply w-48
+//     .bg
+//         @apply h-28
+//     .date, .name
+//         @apply pb-1
+//     .name
+//         @apply text-lg
+//     .content
+//         @apply pl-1 pt-0
+// @media screen and ( max-width: 440px )
+//     .cart, .bg
+//         @apply w-40
+//     .bg
+//         @apply h-24
+//     .name
+//         font-size: 16px
+//         height: 48.8px
+//         white-space: wrap
+//         line-height: 1.4rem
+//         @apply line-clamp-2
+//     .date 
+//         font-size: 14px
+//     .icon
+//         width: 20px

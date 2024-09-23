@@ -1,0 +1,52 @@
+.cart 
+    @apply w-[250px] h-[250px] flex flex-col border border-primary border-solid rounded-lg cursor-pointer p-7
+    .cartContent 
+        .icon
+            @apply w-[60px]
+        .cartContentP
+            @apply text-xl my-4
+        .cartContentPS
+            @apply text-base text-slate-500
+            // background-color: #835d9767 
+.activeCart
+    @apply bg-secondary bg-opacity-30 
+@media screen and (max-width: 820px)
+    .cart 
+        @apply w-[200px] h-[200px] p-4
+        .cartContent 
+            .cartContentP
+                @apply text-base my-2
+            .cartContentPS
+                font-size: 14px
+@media screen and (max-width: 650px)
+    .cart 
+        @apply w-[150px] h-[150px] p-2
+        .cartContent 
+            .icon
+                @apply w-[40px]
+            .cartContentP
+                @apply my-1
+            .cartContentPS
+                font-size: 12px
+                line-height: 1.2rem
+@media screen and (max-width: 480px)
+    .cart 
+        @apply w-[190px] h-[190px] p-4
+        .cartContent 
+            .icon
+                @apply w-[50px]
+            .cartContentP
+                @apply text-base my-2
+            .cartContentPS
+                font-size: 14px
+@media screen and (max-width: 400px)
+    .cart 
+        @apply w-[150px] h-[150px] p-2
+        .cartContent 
+            .icon
+                @apply w-[40px]
+            .cartContentP
+                @apply my-1
+            .cartContentPS
+                font-size: 12px
+                line-height: 1.2rem

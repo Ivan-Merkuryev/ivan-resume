@@ -1,0 +1,20 @@
+.nav
+    @apply w-full fixed h-12 px-5 py-4 flex items-center justify-between z-50 bg-white bg-opacity-50 backdrop-blur-lg shadow-sm
+    // @media screen and (max-width: 370px)
+    //     @apply py-1
+.navUl
+    @apply flex gap-3
+.navUlA
+    @apply list-none px-2 p-1 rounded-xl bg-secondary bg-opacity-30 cursor-pointer
+.active
+    @apply bg-primary bg-opacity-60
+@media screen and (max-width: 400px)
+    .navUl 
+        @apply gap-2 mx-auto
+        max-width: 97%
+@media screen and (max-width: 371px)
+    .nav
+        @apply px-0
+@media screen and (max-width: 332px)
+    .navUl 
+        @apply gap-1

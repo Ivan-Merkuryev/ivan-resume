@@ -1,0 +1,14 @@
+.about
+    @apply mt-10 gap-4
+    display: grid
+    grid-template-columns: 70% 30%
+    align-items: center
+    justify-items: center
+    @media screen and (max-width: 800px)
+        grid-template-columns: 60% 40%
+    @media screen and (max-width: 670px)
+        @apply flex flex-col-reverse gap-4 mt-6
+    .p
+        @apply text-xl
+.button
+    @apply rounded-2xl bg-primary bg-opacity-50 px-3 p-2 text-xl mx-auto
