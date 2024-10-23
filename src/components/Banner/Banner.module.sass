@@ -3,19 +3,10 @@
     // border-b-4 border-primary border-solid pb-10
 .bannerImg
     @apply w-80 rounded-xl
-.bannerContentP
-    white-space: nowrap
-    animation: typing 2s steps(15), cursor .4s step-end infinite alternate
 .bannerH1
     @apply text-5xl inline-block mb-8 border-b-2 border-primary border-solid
     @media screen and (max-width: 670px)
         @apply text-4xl
-@keyframes cursor
-    50% 
-        border-color: transparent 
-@keyframes typing
-    from 
-        width: 0
 @media screen and (max-width: 720px)
     .banner
         @apply grid-cols-1
@@ -23,3 +14,6 @@
         @apply mx-auto
         .bannerH1
             @apply flex justify-center gap-2
+.animation
+    @apply block text-xl min-h-[28px]
+        

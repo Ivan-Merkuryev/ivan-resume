@@ -1,7 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Cart } from "../Cart";
-// import isTouchDevice from "is-touch-device";
-// import afData from "../../afData.json";
 import styles from "./Carousel.module.sass";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -10,37 +8,46 @@ import "swiper/css/scrollbar";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { SetStateAction, useState } from "react";
 import Markdown from "react-markdown";
+import { motion } from "framer-motion";
 const afData = [
   {
     src: "../festival.webp",
     title: "Сайт фестиваля",
-    link: "#",
-    description:
-      "**Первая сложность:** отображение динамических страниц участников - фотографии разного размера, текст с разными особенностями. \n\n**Решение** - использование markdown разметки. Создание кастомного хука для вычислния ширины и высоты фотографии для корректной отрисовки без «скачков».",
-    technologies: "Typescript, React, Framer-motion, sass, tailwindcss",
+    link: "https://www.rimsky-korsakov-wind.ru/",
+    description: `
+* Создал сайт, пройдя все этапы разработки вплоть до его размещения на веб-сервере. 
+* Реализовал хук, который позволяет отображать изображения с учетом их характеристик, что обеспечивает загрузку фото без скачков при рендеринге страницы.
+* Используя разметку Markdown, разрабатываю динамические страницы для участников и афиши, обеспечивая их удобное отображение.`,
+    technologies: "Typescript, React, Redux, Framer-motion, sass, tailwindcss",
+  },
+  {
+    src: "../kanban.webp",
+    title: "Доска задач",
+    link: "https://github.com/Ivan-Merkuryev/kanban",
+    description: `
+* В качестве фронтенд фреймворка выбрал Next.js. Благодаря нему удобно работал с маршрутизацией и разграничением доступа пользователей с разными ролями.
+* JWT обеспечил безопасный механизм авторизации, позволяя пользователям регистрироваться и входить в систему без необходимости хранения сессий на сервере.
+* С помощью PostgreSQL реализовал возможность создания задач, их резервирования и написания отчётов к ним. Пользователи также могут оценивать выполнение задач с помошью компонента rating из Material UI.
+* Создал UI компонент выбора направления задачи.
+* Все формы в приложении находятся под присмотром react-hook-form, с помощью которого происходит проверка введённых данных.
+\n [Код проекта](https://github.com/Ivan-Merkuryev/kanban).`,
+    technologies:
+      "Typescript, Next.js, Redux, sass, tailwindcss, Material UI, NestJS, PostgreSQL, Prisma",
   },
   {
     src: "../art.webp",
     title: "Платформа для художников",
-    link: "#",
-    // description: "Описание",
-    technologies: "Typescript, React, Framer-motion, sass, tailwindcss",
+    link: "https://art-ai86.onrender.com/",
+    description: `
+* Разработал функционал регистрации и авторизации через JWT токен. Это обеспечило безопасный доступ к учетным записям пользователей, улучшив уровень защиты данных и позволив пользователям сохранять свои сессии.
+* Создал удобный интерфейс добавления постов и товаров, используя React и axios на клиентской стороне, а на серверной стороне — multer.  
+* Интегрировал Framer Motion, React Markdown и Material UI для создания интерактивного и визуально привлекательного пользовательского интерфейса.
+\n Это тестовый проект, буду мигрировать его на Next.js и NestJS.
+\n Ознакомиться с кодом можно на моём github: [backend](https://github.com/Ivan-Merkuryev/mern-backend), [frontend](https://github.com/Ivan-Merkuryev/mern-client).
+    `,
+    technologies:
+      "JavaScript, React, Material UI, sass, framer-motion, axios, Express, mongoDB, mongoose, multer",
   },
-  // {
-  //   src: "https://avatars.mds.yandex.net/i?id=c77d01c5f4104fcacb6940f5968cc700_l-5291751-images-thumbs&n=13",
-  //   title: "Фестиваль",
-  //   link: "#",
-  //   // description: "Описание",
-  //   technologies: "Typescript, React, Framer-motion, sass, tailwindcss",
-  // },
-
-  // {
-  //   src: "https://avatars.mds.yandex.net/i?id=c77d01c5f4104fcacb6940f5968cc700_l-5291751-images-thumbs&n=13",
-  //   title: "Фестиваль",
-  //   link: "#",
-  //   // description: "Описание",
-  //   technologies: "Typescript, React, Framer-motion, sass, tailwindcss",
-  // },
 ];
 
 export function Carousel() {
@@ -53,7 +60,7 @@ export function Carousel() {
     setActiveIndex(swiper.realIndex);
   };
   return (
-    <div>
+    <div style={{ minHeight: "100vh" }}>
       <Swiper
         className={styles.swiper}
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -70,6 +77,7 @@ export function Carousel() {
         {afData.map((el, index) => (
           <SwiperSlide key={index}>
             <Cart
+              link={el.link}
               src={el.src}
               title={el.title}
               technologies={el.technologies}
@@ -80,11 +88,9 @@ export function Carousel() {
           <div className="swiper-pagination"></div>
           <button
             className={styles.btnPrev}
-            // className="btnPrev"
             id="btnPrev"
             style={{
               padding: "3px",
-              // backgroundColor: "#ccc",
               cursor: "pointer",
               position: "relative",
               zIndex: 12,
@@ -133,8 +139,16 @@ export function Carousel() {
         </div>
       </Swiper>
       <div className={styles.swiperContent}>
-        <p className={styles.swiperContentP}>Сложности, с которыми я столкнулся и мои решения:</p>
-        <Markdown>{afData[activeIndex].description}</Markdown>
+        <p className={styles.swiperContentP}>О проекте:</p>
+        <motion.div
+          key={activeIndex}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <Markdown>{afData[activeIndex].description}</Markdown>
+        </motion.div>
       </div>
     </div>
   );

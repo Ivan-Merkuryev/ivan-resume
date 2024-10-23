@@ -1,5 +1,5 @@
 .technologies
-    @apply flex flex-wrap gap-3
+    @apply flex flex-wrap flex-col gap-3
 @media screen and (max-width: 500px)
     .technologies
         @apply justify-center gap-2
@@ -8,7 +8,16 @@
     p 
         @apply mb-2
     .aboutTechP
-        @apply my-4 inline-block
+        @apply my-4 inline-block 
         border-bottom: solid 1px #b5ae80 
+        font-size: 28px
+.container
+    @apply flex gap-8
+    min-height: 101vh
+@media screen and (max-width: 600px)
+    .container
+        @apply flex-col
+    .technologies
+        @apply flex-row
+    .aboutTechP
         font-size: 20px
-        

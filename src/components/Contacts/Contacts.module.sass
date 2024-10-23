@@ -1,5 +1,6 @@
 .contacts
-    @apply flex flex-col justify-start gap-4
+    @apply flex flex-col justify-start gap-5
+    min-height: 60vh
     .contact
         @apply flex items-center flex-shrink 
         .link
@@ -9,3 +10,7 @@
             p 
                 @apply h-auto
                 font-size: 18px
+.contact:nth-child(1)
+    @apply mt-10
+.contact:nth-last-child(1)
+    @apply pb-10
