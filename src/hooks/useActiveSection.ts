@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import throttle from 'lodash.throttle';
 
 export function useActiveSection() {
   const [activeSection, setActiveSection] = useState("about");
@@ -14,9 +15,11 @@ export function useActiveSection() {
       });
     };
 
-    window.addEventListener("scroll", handleScroll);
+    const throttledHandleScroll = throttle(handleScroll, 220);
+    
+    window.addEventListener("scroll", throttledHandleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", throttledHandleScroll);
     };
   }, []);
   return activeSection;
