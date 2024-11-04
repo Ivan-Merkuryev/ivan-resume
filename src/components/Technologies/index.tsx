@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { TechnologyCart } from "../TechnologyCard";
+import { TechnologyCart } from "../ui/TechnologyCard";
 import Markdown from "react-markdown";
 import styles from "./Technologies.module.sass";
 import { motion } from "framer-motion";

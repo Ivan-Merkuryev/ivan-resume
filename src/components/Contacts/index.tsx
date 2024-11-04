@@ -26,7 +26,7 @@ export function Contacts() {
   ];
 
   return (
-    <div className={styles.contacts}>
+    <address className={styles.contacts}>
       {contactsArr.map((el, index) => (
         <motion.div
           key={index}
@@ -44,6 +44,6 @@ export function Contacts() {
           </a>
         </motion.div>
       ))}
-    </div>
+    </address>
   );
 }

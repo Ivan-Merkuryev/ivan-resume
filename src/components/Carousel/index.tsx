@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Cart } from "../Cart";
+import { Cart } from "../ui/Cart";
 import styles from "./Carousel.module.sass";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -47,6 +47,15 @@ const afData = [
     `,
     technologies:
       "JavaScript, React, Material UI, sass, framer-motion, axios, Express, mongoDB, mongoose, multer",
+  },
+  {
+    src: "../resume.webp",
+    title: "Этот сайт)",
+    link: "#",
+    description: `
+\n Ну и этот сайт, который вобрал в себя лучшие практики. 
+\n [Посмотреть код](https://github.com/Ivan-Merkuryev/ivan-resume)`,
+    technologies: "Typescript, React, Swiper, Framer-motion, sass, tailwindcss",
   },
 ];
 

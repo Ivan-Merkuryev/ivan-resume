@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import styles from "./TechnologyCard.module.sass";
 interface stack {
   src: string;
@@ -14,7 +13,6 @@ export function TechnologyCart({
   isActive,
   onClick,
 }: stack) {
-  // console.log(isActive);
   return (
     <div
       className={`${styles.cart} ${isActive ? styles.activeCart : ""}`}

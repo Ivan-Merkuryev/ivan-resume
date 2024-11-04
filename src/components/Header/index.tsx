@@ -8,7 +8,6 @@ export function Header({ activeSection }: { activeSection: string }) {
     { name: "Стек", link: "stack" },
     { name: "Контакты", link: "contacts" },
   ];
-  // console.log(activeSection);
   return (
     <header>
       <nav className={styles.nav}>

@@ -1,5 +1,3 @@
-// import { Contacts } from "../Contacts";
-
 import styles from "./About.module.sass";
 
 export function About() {
@@ -13,7 +11,7 @@ export function About() {
         информация.
       </p>
       <div>
-        <a className={styles.button} href="../photo.webp" download>
+        <a className={styles.button} href="../ivan_merkurev_resume.pdf" download>
           <svg
             width="28px"
             height="28px"

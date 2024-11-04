@@ -6,7 +6,6 @@ interface IProject {
   src: string;
   title: string;
   link: string;
-  // description: string;
   technologies: string;
 }
 
