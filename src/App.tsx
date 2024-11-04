@@ -1,12 +1,14 @@
-import { BannerWidget } from "./widgets/banner";
-import { Header } from "./components/Header";
+import { lazy } from "react";
+
 import styles from "./Home.module.sass";
 import { Element } from "react-scroll";
-import { ProjectsWidget } from "./widgets/projects";
-import { StackWidget } from "./widgets/stack";
-import { ContactsWidget } from "./widgets/contacts";
+import { Header } from "./components/Header";
 import { useActiveSection } from "./hooks/useActiveSection";
 
+const BannerWidget = lazy(() => import("./widgets/banner"));
+const StackWidget = lazy(() => import("./widgets/stack"));
+const ProjectsWidget = lazy(() => import("./widgets/projects"));
+const ContactsWidget = lazy(() => import("./widgets/contacts"));
 function App() {
   const activeSection = useActiveSection();
   return (
