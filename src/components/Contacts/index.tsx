@@ -39,7 +39,7 @@ export function Contacts() {
           ref={ref}
         >
           <a href={el.link} target="_blank" className={styles.link}>
-            <img src={el.icon} alt="" />
+            <img loading="lazy" src={el.icon} alt="" />
             <p>{el.value}</p>
           </a>
         </motion.div>

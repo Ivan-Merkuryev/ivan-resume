@@ -21,7 +21,7 @@ export function Cart({ src, title, link, technologies }: IProject) {
     <motion.div ref={ref} style={{scale: scrollYProgress, opacity: scrollYProgress}} className={styles.cart}>
       <a href={link} target="_blank">
         <div>
-          <img src={src} className={styles.bg} alt="" />
+          <img src={src} loading="lazy" className={styles.bg} alt="" />
         </div>
         <div className={styles.content}>
           <p className={styles.name}>{title}</p>

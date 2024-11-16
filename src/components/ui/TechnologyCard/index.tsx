@@ -19,7 +19,7 @@ export function TechnologyCart({
       onClick={onClick}
     >
       <div className={styles.cartContent}>
-        <img className={styles.icon} src={src} alt={header} />
+        <img loading="lazy" className={styles.icon} src={src} alt={header} />
         <p className={styles.cartContentP}>{header}</p>
         <p className={styles.cartContentPS}>{technology}</p>
       </div>

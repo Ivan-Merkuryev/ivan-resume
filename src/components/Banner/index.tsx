@@ -3,7 +3,6 @@ import styles from "./Banner.module.sass";
 export function Banner() {
   return (
     <div className={styles.banner}>
-      <link rel="preload" href="./photo.webp" as="image" />
       <div className="flex justify-center">
         <img
           className={styles.bannerImg}
