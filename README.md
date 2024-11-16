@@ -1,50 +1,28 @@
-# React + TypeScript + Vite
+# Мой Сайт-Резюме
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Добро пожаловать на мой сайт-резюме, созданный с использованием React JS! Этот проект предоставляет информацию о моих навыках, технологиях и проектах. Здесь вы можете узнать больше обо мне и моем профессиональном пути.
 
-Currently, two official plugins are available:
+Сайт: https://imerkurev.ru
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## О проекте
 
-## Expanding the ESLint configuration
+Сайт-резюме разработан для демонстрации моих технических навыков. Он включает в себя:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Галерею моих проектов с краткими описаниями и ссылками.
+- Раздел с информацией о моих технологиях.
+- Контактные данные для связи со мной.
 
-- Configure the top-level `parserOptions` property like this:
+## Установка
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Для того чтобы запустить этот проект локально, выполните следующие шаги:
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+1. Клонируйте репозиторий:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+   ```
+   git clone https://github.com/Ivan-Merkuryev/ivan-resume.git
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2. Запустите проект:
+
+    ``` 
+    npm run dev
+
