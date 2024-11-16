@@ -9,7 +9,8 @@ export function useActiveSection() {
       const sections = document.querySelectorAll("section");
       sections.forEach((section) => {
         const rect = section.getBoundingClientRect();
-        if (rect.top >= 0 && rect.top + 280 < window.innerHeight) {
+        const sectionCenter = rect.top + rect.height / 2;
+        if (sectionCenter >= 0 && sectionCenter < window.innerHeight) {
           setActiveSection(section.id);
         }
       });

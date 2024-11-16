@@ -18,7 +18,7 @@ export function Banner() {
           <span className="text-primary block pb-2">Меркурьев</span>
         </h1>
         <span className={styles.bannerContentDescription}>
-          Fullstack JavaScript разработчик
+          Frontend JavaScript разработчик
         </span>
       </div>
     </div>

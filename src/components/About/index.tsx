@@ -4,14 +4,14 @@ export function About() {
   return (
     <div className={styles.about}>
       <p className={styles.p}>
-        Привет! Я fullstack-разработчиком с более чем двухлетним опытом создания
-        веб-приложений. В своей работе я стремлюсь к тому, чтобы взаимодействие
+        Привет! Я frontend-разработчик с более чем двухлетним опытом создания
+        веб-приложений. Также активно занимаюсь backend разработкой. В своей работе я стремлюсь к тому, чтобы взаимодействие
         пользователя с приложениями было максимально комфортным и эффективным.
         Вот некоторые из моих проектов, используемые технологии и контактная
         информация.
       </p>
       <div>
-        <a className={styles.button} href="../ivan_merkurev_resume.pdf" download>
+        <a className={styles.button} href="../ivan_merkurev_frontend_resume.pdf" download>
           <svg
             width="28px"
             height="28px"
